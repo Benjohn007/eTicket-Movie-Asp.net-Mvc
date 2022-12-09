@@ -5,11 +5,12 @@ using System.Threading.Tasks;
 
 namespace eTicket.Data
 {
-    public enum MovieCatergory
+    public enum MovieCategory
     {
-        Acion =1,
+        Action =1,
         Comedy,
         Drama,
-        Documentary
+        Documentary,
+        Horror
     }
 }
