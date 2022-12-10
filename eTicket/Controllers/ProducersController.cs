@@ -18,8 +18,8 @@ namespace eTicket.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var data = await _context.Producers.ToListAsync();
-            return View();
+            var allProducer = await _context.Producers.ToListAsync();
+            return View(allProducer);
         }
     }
 }
