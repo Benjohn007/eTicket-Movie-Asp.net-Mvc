@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace eTicket.Controllers
 {
-    public class CinemasController1 : Controller
+    public class CinemasController : Controller
     {
         private readonly AppDbContext _context;
 
-        public CinemasController1(AppDbContext context)
+        public CinemasController(AppDbContext context)
         {
             _context = context;
         }
         public async Task<IActionResult> Index()
         {
-            var data = await _context.Cinemas.ToListAsync();
-            return View();
+            var allCinemas = await _context.Cinemas.ToListAsync();
+            return View(allCinemas);
         }
     }
 }
